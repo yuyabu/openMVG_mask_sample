@@ -1,0 +1,24 @@
+20:09:15 [App     ] Build date: Aug 16 2019, 19:55:41
+20:09:15 [App     ] CPU: Intel(R) Xeon(R) Platinum 8176 CPU @ 2.10GHz (112 cores)
+20:09:15 [App     ] RAM: 1007.08GB Physical Memory 980.00MB Virtual Memory
+20:09:15 [App     ] OS: Linux 4.15.0-58-generic (x86_64)
+20:09:15 [App     ] SSE & AVX compatible CPU & OS detected
+20:09:15 [App     ] Command line: -w /home/yabushita/mask_test/tmp /home/yabushita/mask_test/result/mvs/scene_dense.mvs
+20:09:16 [App     ] Scene loaded (993ms):
+	11 images (11 calibrated) with a total of 15.81 MPixels (1.44 MPixels/image)
+	1109307 points, 0 vertices, 0 faces
+20:09:22 [App     ] Delaunay tetrahedralization completed: 1109307 points -> 474819 vertices, 2983295 (+198) cells, 5966689 (+297) faces (6s66ms)
+20:09:26 [App     ] Delaunay tetrahedras weighting completed: 2983493 cells, 5966986 faces (3s525ms)
+20:09:32 [App     ] Delaunay tetrahedras graph-cut completed (371803 flow): 448164 vertices, 896766 faces (6s415ms)
+20:09:36 [App     ] Mesh reconstruction completed: 448268 vertices, 896518 faces (20s807ms)
+20:09:42 [App     ] Cleaned mesh: 447806 vertices, 895271 faces (6s62ms)
+20:09:45 [App     ] Cleaned mesh: 447809 vertices, 895279 faces (2s965ms)
+20:09:47 [App     ] Cleaned mesh: 447809 vertices, 895279 faces (1s428ms)
+20:09:47 [App     ] Scene saved (523ms):
+	11 images (11 calibrated)
+	0 points, 447809 vertices, 895279 faces
+20:09:47 [App     ] Mesh saved: 447809 vertices, 895279 faces (88ms)
+20:09:47 [App     ] MEMORYINFO: {
+20:09:47 [App     ] 	VmPeak:	 9576832 kB
+20:09:47 [App     ] 	VmSize:	 8924732 kB
+20:09:47 [App     ] } ENDINFO

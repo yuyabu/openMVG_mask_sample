@@ -1,0 +1,20 @@
+20:09:48 [App     ] Build date: Aug 16 2019, 19:55:41
+20:09:48 [App     ] CPU: Intel(R) Xeon(R) Platinum 8176 CPU @ 2.10GHz (112 cores)
+20:09:48 [App     ] RAM: 1007.08GB Physical Memory 980.00MB Virtual Memory
+20:09:48 [App     ] OS: Linux 4.15.0-58-generic (x86_64)
+20:09:48 [App     ] SSE & AVX compatible CPU & OS detected
+20:09:48 [App     ] Command line: -w /home/yabushita/mask_test/tmp /home/yabushita/mask_test/result/mvs/scene_dense_mesh.mvs
+20:09:48 [App     ] Scene loaded (315ms):
+	11 images (11 calibrated) with a total of 63.22 MPixels (5.75 MPixels/image)
+	0 points, 447809 vertices, 895279 faces
+20:09:58 [App     ] Assigning the best view to each face completed: 895279 faces (10s456ms)
+20:10:52 [App     ] Generating texture atlas and image completed: 55950 patches, 8192 image size (53s837ms)
+20:10:52 [App     ] Mesh texturing completed: 447809 vertices, 895279 faces (1m4s441ms)
+20:11:01 [App     ] Scene saved (8s887ms):
+	11 images (11 calibrated)
+	0 points, 447809 vertices, 895279 faces
+20:11:06 [App     ] Mesh saved: 447809 vertices, 895279 faces (5s160ms)
+20:11:06 [App     ] MEMORYINFO: {
+20:11:06 [App     ] 	VmPeak:	12061160 kB
+20:11:07 [App     ] 	VmSize:	 9521064 kB
+20:11:07 [App     ] } ENDINFO

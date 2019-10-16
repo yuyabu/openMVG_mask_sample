@@ -1,0 +1,329 @@
+ You called : 
+lib/openMVG/bin/openMVG_main_SfMInit_ImageListing
+--imageDirectory mask_test/input
+--sensorWidthDatabase conf/sensor_width_camera_database.txt
+--outputDirectory mask_test/result/matches
+--focal -1
+--intrinsics 
+--camera_model 3
+--group_camera_model 1
+
+- Image listing -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+Warning & Error messages:
+100_7100_mask.png is a mask image
+100_7101_mask.png is a mask image
+100_7102_mask.png is a mask image
+100_7103_mask.png is a mask image
+100_7104_mask.png is a mask image
+100_7105_mask.png is a mask image
+100_7106_mask.png is a mask image
+100_7107_mask.png is a mask image
+100_7108_mask.png is a mask image
+100_7109_mask.png is a mask image
+100_7110_mask.png is a mask image
+
+
+SfMInit_ImageListing report:
+listed #File(s): 22
+usable #File(s) listed in sfm_data: 11
+usable #Intrinsic(s) listed in sfm_data: 1
+ You called : 
+lib/openMVG/bin/openMVG_main_ComputeFeatures
+--input_file mask_test/result/matches/sfm_data.json
+--outdir mask_test/result/matches
+--describerMethod SIFT
+--upright 0
+--describerPreset NORMAL
+--force 1
+--numThreads 0
+
+
+- EXTRACT FEATURES -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+Task done in (s): 20
+ You called : 
+lib/openMVG/bin/openMVG_main_ComputeMatches
+--input_file mask_test/result/matches/sfm_data.json
+--out_dir mask_test/result/matches
+Optional parameters:
+--force 1
+--ratio 0.8
+--geometric_model f
+--video_mode_matching -1
+--pair_list 
+--nearest_matching_method AUTO
+--guided_matching 0
+--cache_size unlimited
+
+- Regions Loading -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+ - PUTATIVE MATCHES - 
+Use: exhaustive pairwise matching
+Using FAST_CASCADE_HASHING_L2 matcher
+Using the OPENMP thread interface
+
+- Matching -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+Task (Regions Matching) done in (s): 0
+
+- Geometric filtering -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+Task done in (s): 0
+
+ Export Adjacency Matrix of the pairwise's geometric matches
+Sequential/Incremental reconstruction (Engine 2)
+
+
+- Features Loading -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+- Relative pose computation -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+******
+**********************************************
+*
+*
+*
+*
+*
+*
+*
+Relative motion computation took: 139(ms)
+The chosen stellar pod has 9 pairs.
+Stellar pod details:
+#central pose id: 2
+#pairs: 9
+#2-uplets: 36
+Stellar reconstruction with center node: 2
+#relative scales: 35
+#pairs : 9
+Pair: 0,2; scaling: 0.147974
+Pair: 1,2; scaling: 0.396948
+Pair: 2,3; scaling: 1
+Pair: 2,4; scaling: 0.309308
+Pair: 2,5; scaling: 0.173901
+Pair: 2,6; scaling: 0.132811
+Pair: 2,7; scaling: 0.104317
+Pair: 2,8; scaling: 0.0799021
+Pair: 2,9; scaling: 0.0733619
+#point depth filter: 16 measurements removed
+Initialization status : Success
+
+Track stats
+------------------
+-- Tracks Stats --
+ Tracks number: 4663
+ Images Id: 
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 
+------------------
+TrackLength, Occurrence
+	2	2281
+	3	897
+	4	494
+	5	326
+	6	212
+	7	177
+	8	107
+	9	103
+	10	54
+	11	12
+
+
+
+-------------------------------
+-- Starting Structure from Motion (statistics) with:
+-- #Camera calibrated: 10 from 11 input images.
+-- #Tracks, #3D points: 4336
+-------------------------------
+ViewId: 10; #number of 2D-3D matches: 301; 65.1515 % of the view track coverage.
+  nfa=-960.458 inliers=284/301 precisionNormalized=8.96326e-05 precision=27.2781 (iter=0 ,sample=245,41,272,)
+  nfa=-1014.41 inliers=270/301 precisionNormalized=3.22037e-05 precision=16.3506 (iter=2 ,sample=279,226,175,)
+  nfa=-1015.35 inliers=282/301 precisionNormalized=5.26504e-05 precision=20.9065 (iter=64 ,sample=205,73,79,)
+  nfa=-1038.64 inliers=268/301 precisionNormalized=2.39254e-05 precision=14.0932 (iter=131 ,sample=9,53,226,)
+
+-------------------------------
+-- Robust Resection 
+-- Resection status: 1
+-- #Points used for Resection: 301
+-- #Points validated by robust Resection: 268
+-- Threshold: 14.0932
+-------------------------------
+
+-------------------------------
+-- Robust Resection of camera index: <10> image: 100_7110.JPG
+-- Threshold: 14.0932
+-- Resection status: OK
+-- Nb points used for Resection: 301
+-- Nb points validated by robust estimation: 268
+-- % points validated: 89.0365
+-------------------------------
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 1
+ #poses: 1
+ #intrinsics: 1
+ #tracks: 268
+ #residuals: 536
+ Initial RMSE: 3.54144
+ Final RMSE: 3.24649
+ Time (s): 0.00307059
+
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 11
+ #poses: 11
+ #intrinsics: 1
+ #tracks: 4587
+ #residuals: 29898
+ Initial RMSE: 0.614212
+ Final RMSE: 0.301126
+ Time (s): 0.441009
+
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 11
+ #poses: 11
+ #intrinsics: 1
+ #tracks: 4583
+ #residuals: 29880
+ Initial RMSE: 0.293449
+ Final RMSE: 0.292574
+ Time (s): 0.299407
+
+
+
+-------------------------------
+-- Structure from Motion (statistics):
+-- #Camera calibrated: 11 from 11 input images.
+-- #Tracks, #3D points: 4583
+-- #Poses loop used: 1
+-------------------------------
+
+ Total Ac-Sfm took (s): 2
+...Generating SfM_Report.html
+...Export SfM_Data to disk.
+
+- PROCESS VIEWS -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+- UNDISTORT IMAGES -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+****************************
+************************
+*
+*
+*
+*
+*
+*
+*
+*
+*
+Scene saved to OpenMVS interface format:
+ #platforms: 1
+  platform ( 0 ) #cameras: 1
+  11 images (11 calibrated)
+  4583 Landmarks
+20:08:21 [App     ] Build date: Aug 16 2019, 19:56:25
+20:08:21 [App     ] CPU: Intel(R) Xeon(R) Platinum 8176 CPU @ 2.10GHz (112 cores)
+20:08:21 [App     ] RAM: 1007.08GB Physical Memory 980.00MB Virtual Memory
+20:08:21 [App     ] OS: Linux 4.15.0-58-generic (x86_64)
+20:08:21 [App     ] SSE & AVX compatible CPU & OS detected
+20:08:21 [App     ] Command line: -w mask_test/tmp mask_test/result/mvs/scene.mvs
+20:08:21 [App     ] Camera model loaded: platform 0; camera  0; f 1.052x1.052; poses 11
+20:08:21 [App     ] Image loaded   0: 100_7100.JPG
+20:08:21 [App     ] Image loaded   1: 100_7101.JPG
+20:08:21 [App     ] Image loaded   2: 100_7102.JPG
+20:08:21 [App     ] Image loaded   3: 100_7103.JPG
+20:08:21 [App     ] Image loaded   4: 100_7104.JPG
+20:08:21 [App     ] Image loaded   5: 100_7105.JPG
+20:08:21 [App     ] Image loaded   6: 100_7106.JPG
+20:08:21 [App     ] Image loaded   7: 100_7107.JPG
+20:08:21 [App     ] Image loaded   8: 100_7108.JPG
+20:08:21 [App     ] Image loaded   9: 100_7109.JPG
+20:08:21 [App     ] Image loaded  10: 100_7110.JPG
+20:08:21 [App     ] Scene loaded from interface format (102ms):
+	11 images (11 calibrated) with a total of 63.22 MPixels (5.75 MPixels/image)
+	4583 points, 0 vertices, 0 faces
+20:08:21 [App     ] Preparing images for dense reconstruction completed: 11 images (177ms)
+20:08:21 [App     ] Selecting images for dense reconstruction completed: 11 images (12ms)
+Estimated depth-maps 11 (100%, 42s135ms)          
+Filtered depth-maps 11 (100%, 2s534ms)       
+Fused depth-maps 11 (100%, 2s703ms)           
+20:09:12 [App     ] Depth-maps fused and filtered: 11 depth-maps, 7604147 depths, 1109307 points (15%%) (6s125ms)
+20:09:12 [App     ] Densifying point-cloud completed: 1109307 points (51s64ms)
+20:09:14 [App     ] Scene saved (2s54ms):
+	11 images (11 calibrated)
+	1109307 points, 0 vertices, 0 faces
+20:09:14 [App     ] Point-cloud saved: 1109307 points (103ms)
+20:09:14 [App     ] MEMORYINFO: {
+20:09:14 [App     ] 	VmPeak:	11932288 kB
+20:09:14 [App     ] 	VmSize:	11128284 kB
+20:09:14 [App     ] } ENDINFO
+20:09:15 [App     ] Build date: Aug 16 2019, 19:55:41
+20:09:15 [App     ] CPU: Intel(R) Xeon(R) Platinum 8176 CPU @ 2.10GHz (112 cores)
+20:09:15 [App     ] RAM: 1007.08GB Physical Memory 980.00MB Virtual Memory
+20:09:15 [App     ] OS: Linux 4.15.0-58-generic (x86_64)
+20:09:15 [App     ] SSE & AVX compatible CPU & OS detected
+20:09:15 [App     ] Command line: -w mask_test/tmp mask_test/result/mvs/scene_dense.mvs
+20:09:16 [App     ] Scene loaded (993ms):
+	11 images (11 calibrated) with a total of 15.81 MPixels (1.44 MPixels/image)
+	1109307 points, 0 vertices, 0 faces
+Points inserted 1109307 (100%, 5s681ms)           
+20:09:22 [App     ] Delaunay tetrahedralization completed: 1109307 points -> 474819 vertices, 2983295 (+198) cells, 5966689 (+297) faces (6s66ms)
+Points weighted 474819 (100%, 1s314ms)              
+20:09:26 [App     ] Delaunay tetrahedras weighting completed: 2983493 cells, 5966986 faces (3s525ms)
+20:09:32 [App     ] Delaunay tetrahedras graph-cut completed (371803 flow): 448164 vertices, 896766 faces (6s415ms)
+20:09:36 [App     ] Mesh reconstruction completed: 448268 vertices, 896518 faces (20s807ms)
+20:09:42 [App     ] Cleaned mesh: 447806 vertices, 895271 faces (6s62ms)
+20:09:45 [App     ] Cleaned mesh: 447809 vertices, 895279 faces (2s965ms)
+20:09:47 [App     ] Cleaned mesh: 447809 vertices, 895279 faces (1s428ms)
+20:09:47 [App     ] Scene saved (523ms):
+	11 images (11 calibrated)
+	0 points, 447809 vertices, 895279 faces
+20:09:47 [App     ] Mesh saved: 447809 vertices, 895279 faces (88ms)
+20:09:47 [App     ] MEMORYINFO: {
+20:09:47 [App     ] 	VmPeak:	 9576832 kB
+20:09:47 [App     ] 	VmSize:	 8924732 kB
+20:09:47 [App     ] } ENDINFO
+20:09:48 [App     ] Build date: Aug 16 2019, 19:55:41
+20:09:48 [App     ] CPU: Intel(R) Xeon(R) Platinum 8176 CPU @ 2.10GHz (112 cores)
+20:09:48 [App     ] RAM: 1007.08GB Physical Memory 980.00MB Virtual Memory
+20:09:48 [App     ] OS: Linux 4.15.0-58-generic (x86_64)
+20:09:48 [App     ] SSE & AVX compatible CPU & OS detected
+20:09:48 [App     ] Command line: -w mask_test/tmp mask_test/result/mvs/scene_dense_mesh.mvs
+20:09:48 [App     ] Scene loaded (315ms):
+	11 images (11 calibrated) with a total of 63.22 MPixels (5.75 MPixels/image)
+	0 points, 447809 vertices, 895279 faces
+Initialized views 11 (100%, 2s996ms)           
+20:09:58 [App     ] Assigning the best view to each face completed: 895279 faces (10s456ms)
+20:10:52 [App     ] Generating texture atlas and image completed: 55950 patches, 8192 image size (53s837ms)
+20:10:52 [App     ] Mesh texturing completed: 447809 vertices, 895279 faces (1m4s441ms)
+20:11:01 [App     ] Scene saved (8s887ms):
+	11 images (11 calibrated)
+	0 points, 447809 vertices, 895279 faces
+20:11:06 [App     ] Mesh saved: 447809 vertices, 895279 faces (5s160ms)
+20:11:06 [App     ] MEMORYINFO: {
+20:11:06 [App     ] 	VmPeak:	12061160 kB
+20:11:07 [App     ] 	VmSize:	 9521064 kB
+20:11:07 [App     ] } ENDINFO
+
